@@ -10,6 +10,12 @@
     "jsxImportSource": "solid-js",
     "types": ["vite/client"],
     "noEmit": true,
-    "isolatedModules": true
-  }
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["./src/pages/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
