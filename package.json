@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
+    "start": "vite --port 9999",
+    "dev": "vite --port 9999",
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint --ext .jsx,.js,.tsx,.ts src/",
