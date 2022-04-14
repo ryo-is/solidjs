@@ -3,11 +3,9 @@ import { Route, Routes } from 'solid-app-router';
 import { Top } from '@pages/Top';
 import { Signal } from '@pages/Signal';
 
-import styles from './App.module.css';
-
 export const App: Component = () => {
   return (
-    <div class={styles.App}>
+    <div class="flex flex-col min-h-screen text-gray-200 bg-zinc-800">
       <Routes>
         <Route path="/" element={<Top />} />
         <Route path="/signal" element={<Signal />} />

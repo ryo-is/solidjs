@@ -5,5 +5,5 @@ export const Signal = (): JSX.Element => {
 
   setInterval(() => setCount(count() + 1), 1000);
 
-  return <div>Connt: {count()}</div>;
+  return <div class="p-4">Connt: {count()}</div>;
 };
