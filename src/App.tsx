@@ -5,6 +5,7 @@ import { Signal } from '@pages/Signal';
 import { Effect } from '@pages/Effect';
 import { Memo } from '@pages/Memo';
 import { ShowContent } from '@pages/Show';
+import { ForContent } from '@pages/For';
 
 export const App: Component = () => {
   return (
@@ -15,6 +16,7 @@ export const App: Component = () => {
         <Route path="/effect" element={<Effect />} />
         <Route path="/memo" element={<Memo />} />
         <Route path="/show" element={<ShowContent />} />
+        <Route path="/for" element={<ForContent />} />
       </Routes>
     </div>
   );
