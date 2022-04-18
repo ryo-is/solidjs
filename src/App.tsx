@@ -10,6 +10,7 @@ import { SwitchContent } from '@pages/Switch';
 import { DynamicContent } from '@pages/Dynamic';
 import { Mount } from '@pages/Mount';
 import { Cleanup } from '@pages/Cleanup';
+import { PropsContent } from '@pages/Props';
 
 export const App: Component = () => {
   return (
@@ -25,6 +26,7 @@ export const App: Component = () => {
         <Route path="/dynamic" element={<DynamicContent />} />
         <Route path="/mount" element={<Mount />} />
         <Route path="/cleanup" element={<Cleanup />} />
+        <Route path="/props" element={<PropsContent />} />
       </Routes>
     </div>
   );
