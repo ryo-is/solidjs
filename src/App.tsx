@@ -9,6 +9,7 @@ import { ForContent } from '@pages/For';
 import { SwitchContent } from '@pages/Switch';
 import { DynamicContent } from '@pages/Dynamic';
 import { Mount } from '@pages/Mount';
+import { Cleanup } from '@pages/Cleanup';
 
 export const App: Component = () => {
   return (
@@ -23,6 +24,7 @@ export const App: Component = () => {
         <Route path="/switch" element={<SwitchContent />} />
         <Route path="/dynamic" element={<DynamicContent />} />
         <Route path="/mount" element={<Mount />} />
+        <Route path="/cleanup" element={<Cleanup />} />
       </Routes>
     </div>
   );
