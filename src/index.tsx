@@ -4,11 +4,14 @@ import { Router } from 'solid-app-router';
 
 import './index.css';
 import { App } from './App';
+import { Layout } from '@components/Layout';
 
 render(
   () => (
     <Router>
-      <App />
+      <Layout>
+        <App />
+      </Layout>
     </Router>
   ),
   document.getElementById('root') as HTMLElement

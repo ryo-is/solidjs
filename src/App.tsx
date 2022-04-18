@@ -14,7 +14,7 @@ import { PropsContent } from '@pages/Props';
 
 export const App: Component = () => {
   return (
-    <div class="flex flex-col min-h-screen text-gray-200 bg-zinc-800">
+    <div>
       <Routes>
         <Route path="/" element={<Top />} />
         <Route path="/signal" element={<Signal />} />
