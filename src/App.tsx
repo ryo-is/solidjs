@@ -4,6 +4,7 @@ import { Top } from '@pages/Top';
 import { Signal } from '@pages/Signal';
 import { Effect } from '@pages/Effect';
 import { Memo } from '@pages/Memo';
+import { ShowContent } from '@pages/Show';
 
 export const App: Component = () => {
   return (
@@ -13,6 +14,7 @@ export const App: Component = () => {
         <Route path="/signal" element={<Signal />} />
         <Route path="/effect" element={<Effect />} />
         <Route path="/memo" element={<Memo />} />
+        <Route path="/show" element={<ShowContent />} />
       </Routes>
     </div>
   );
