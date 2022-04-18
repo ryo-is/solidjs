@@ -7,6 +7,7 @@ import { Memo } from '@pages/Memo';
 import { ShowContent } from '@pages/Show';
 import { ForContent } from '@pages/For';
 import { SwitchContent } from '@pages/Switch';
+import { DynamicContent } from '@pages/Dynamic';
 
 export const App: Component = () => {
   return (
@@ -19,6 +20,7 @@ export const App: Component = () => {
         <Route path="/show" element={<ShowContent />} />
         <Route path="/for" element={<ForContent />} />
         <Route path="/switch" element={<SwitchContent />} />
+        <Route path="/dynamic" element={<DynamicContent />} />
       </Routes>
     </div>
   );
