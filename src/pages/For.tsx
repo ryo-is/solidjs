@@ -1,4 +1,4 @@
-import { Component, createSignal, For } from 'solid-js';
+import { Component, createSignal, For, Index } from 'solid-js';
 
 export const ForContent: Component = () => {
   const [cats] = createSignal<{ id: string; name: string }[]>([
@@ -9,10 +9,17 @@ export const ForContent: Component = () => {
 
   return (
     <div class="p-4">
+      <div>For</div>
       <ul>
         <For each={cats()}>
           {(cat, i) => <li>{`${i() + 1}: ${cat.name}`}</li>}
         </For>
+      </ul>
+      <div>Index</div>
+      <ul>
+        <Index each={cats()}>
+          {(cat, i) => <li>{`${i + 1}: ${cat().name}`}</li>}
+        </Index>
       </ul>
     </div>
   );
