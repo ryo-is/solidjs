@@ -1,5 +1,5 @@
 import { Component, createSignal, For } from 'solid-js';
-import { createStore } from 'solid-js/store';
+import { createStore, produce } from 'solid-js/store';
 
 type Todo = {
   id: number;
@@ -14,17 +14,18 @@ export const Store: Component = () => {
 
   const addTodo = () => {
     if (!text()) return;
-    setStore('todos', (todos) => [
-      ...todos,
-      { id: ++todoId, text: text(), completed: false },
-    ]);
+    setStore(
+      'todos',
+      produce((todos) => {
+        todos.push({ id: ++todoId, text: text(), completed: false });
+      })
+    );
   };
   const toggleTodo = (id: number) => {
     setStore(
       'todos',
       (todo) => todo.id === id,
-      'completed',
-      (completed) => !completed
+      produce((todo) => (todo.completed = !todo.completed))
     );
   };
 
