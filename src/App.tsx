@@ -11,6 +11,7 @@ import { DynamicContent } from '@pages/Dynamic';
 import { Mount } from '@pages/Mount';
 import { Cleanup } from '@pages/Cleanup';
 import { PropsContent } from '@pages/Props';
+import { Store } from '@pages/Store';
 
 export const App: Component = () => {
   return (
@@ -27,6 +28,7 @@ export const App: Component = () => {
         <Route path="/mount" element={<Mount />} />
         <Route path="/cleanup" element={<Cleanup />} />
         <Route path="/props" element={<PropsContent />} />
+        <Route path="/store" element={<Store />} />
       </Routes>
     </div>
   );
