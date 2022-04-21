@@ -3,6 +3,7 @@ import { render } from 'solid-js/web';
 import { Router } from 'solid-app-router';
 
 import './index.css';
+import 'tw-elements';
 import { App } from './App';
 import { Layout } from '@components/Layout';
 
