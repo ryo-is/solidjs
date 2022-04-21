@@ -1,6 +1,6 @@
 import { Component, createSignal, For, Index } from 'solid-js';
 
-export const ForContent: Component = () => {
+export const ForComponent: Component = () => {
   const [cats] = createSignal<{ id: string; name: string }[]>([
     { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
     { id: 'z_AbfPXTKms', name: 'Maru' },

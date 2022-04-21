@@ -1,6 +1,6 @@
 import { Component, createSignal, Show } from 'solid-js';
 
-export const ShowContent: Component = () => {
+export const ShowComponent: Component = () => {
   const [loggedIn, setLoggedIn] = createSignal(false);
 
   return (

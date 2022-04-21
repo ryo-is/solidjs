@@ -13,7 +13,7 @@ const options = {
   blue: Blue,
 };
 
-export const DynamicContent: Component = () => {
+export const DynamicComponent: Component = () => {
   const [selected, setSelected] = createSignal<keyof typeof options>('red');
 
   return (

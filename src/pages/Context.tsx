@@ -1,7 +1,7 @@
 import { Component } from 'solid-js';
 import { useCounter } from '@contexts/CounterContext';
 
-export const ContextContent: Component = () => {
+export const ContextComponent: Component = () => {
   const [count, { increment, decrement }] = useCounter();
 
   return (

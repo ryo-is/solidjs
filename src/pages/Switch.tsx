@@ -1,6 +1,6 @@
 import { createSignal, Component, Switch, Match } from 'solid-js';
 
-export const SwitchContent: Component = () => {
+export const SwitchComponent: Component = () => {
   const [count, setCount] = createSignal(5);
 
   const countUp = () => setCount((c) => c + 1);

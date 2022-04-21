@@ -3,7 +3,7 @@ import { Child } from '@components/Child';
 import { DefaultProps } from '@components/DefaultProps';
 import { SplitProps } from '@components/SplitProps';
 
-export const PropsContent: Component = () => {
+export const PropsComponent: Component = () => {
   const [name] = createSignal('Taro');
   const [color, setColor] = createSignal('purple');
 
