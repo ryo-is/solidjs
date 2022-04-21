@@ -12,6 +12,7 @@ import { Mount } from '@pages/Mount';
 import { Cleanup } from '@pages/Cleanup';
 import { PropsContent } from '@pages/Props';
 import { Store } from '@pages/Store';
+import { ContextContent } from '@pages/Context';
 
 export const App: Component = () => {
   return (
@@ -29,6 +30,7 @@ export const App: Component = () => {
         <Route path="/cleanup" element={<Cleanup />} />
         <Route path="/props" element={<PropsContent />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/context" element={<ContextContent />} />
       </Routes>
     </div>
   );

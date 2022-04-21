@@ -1,6 +1,7 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
 import { Router } from 'solid-app-router';
+import { CounterProvider } from '@contexts/CounterContext';
 
 import './index.css';
 import 'tw-elements';
@@ -11,7 +12,9 @@ render(
   () => (
     <Router>
       <Layout>
-        <App />
+        <CounterProvider>
+          <App />
+        </CounterProvider>
       </Layout>
     </Router>
   ),
