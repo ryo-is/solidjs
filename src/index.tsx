@@ -4,7 +4,6 @@ import { Router } from 'solid-app-router';
 import { CounterProvider } from '@contexts/CounterContext';
 
 import './index.css';
-import 'tw-elements';
 import { App } from './App';
 import { Layout } from '@components/Layout';
 

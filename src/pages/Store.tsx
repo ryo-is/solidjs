@@ -9,7 +9,9 @@ type Todo = {
 
 export const Store: Component = () => {
   let todoId = 0;
-  const [store, setStore] = createStore<{ todos: Todo[] }>({ todos: [] });
+  const [store, setStore] = createStore<{ todos: Todo[] }>({
+    todos: [{ id: 9999, text: 'hoge', completed: false }],
+  });
   const [text, setText] = createSignal('');
 
   const addTodo = () => {
@@ -35,40 +37,47 @@ export const Store: Component = () => {
         <input
           value={text()}
           onChange={(e) => setText(e.currentTarget.value)}
-          class="block appearance-none bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline text-zinc-800 mb-2"
+          class="input input-bordered mr-4 w-96"
         />
         <button
           onClick={() => {
             addTodo();
           }}
-          class="bg-blue-600 hover:bg-blue-700 text-gray-200 py-2 px-4 rounded mt-2"
+          class="btn btn-primary mt-2 normal-case"
         >
           Add Todo
         </button>
       </div>
-      <For each={store.todos}>
-        {(todo) => {
-          const { id, text } = todo;
-          console.log(`Creating ${text}`);
-          return (
-            <div class="my-2 form-check">
-              <input
-                type="checkbox"
-                checked={todo.completed}
-                onchange={[toggleTodo, id]}
-                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-              />
-              <label
-                style={{
-                  'text-decoration': todo.completed ? 'line-through' : 'none',
-                }}
-              >
-                {text}
-              </label>
-            </div>
-          );
-        }}
-      </For>
+      <div class="form-control mt-2">
+        <For each={store.todos}>
+          {(todo) => {
+            const { id, text } = todo;
+            console.log(`Creating ${text}`);
+            return (
+              <div>
+                <label class="label cursor-pointer inline-flex">
+                  <input
+                    type="checkbox"
+                    checked={todo.completed}
+                    onchange={[toggleTodo, id]}
+                    class="checkbox checkbox-primary"
+                  />
+                  <span
+                    class="ml-2"
+                    style={{
+                      'text-decoration': todo.completed
+                        ? 'line-through'
+                        : 'none',
+                    }}
+                  >
+                    {text}
+                  </span>
+                </label>
+              </div>
+            );
+          }}
+        </For>
+      </div>
     </div>
   );
 };

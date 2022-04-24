@@ -1,4 +1,4 @@
-import { Component, createSignal, onMount, For } from 'solid-js';
+import { Component, createSignal, onMount, onCleanup, For } from 'solid-js';
 
 export const Mount: Component = () => {
   const [photos, setPhotos] = createSignal<
@@ -10,6 +10,10 @@ export const Mount: Component = () => {
       `https://jsonplaceholder.typicode.com/photos?_limit=20`
     );
     setPhotos(await res.json());
+  });
+
+  onCleanup(() => {
+    setPhotos([]);
   });
 
   return (
